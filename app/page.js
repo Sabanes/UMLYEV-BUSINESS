@@ -28,7 +28,7 @@ export default function Home() {
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
 
-    setButtonText('✓ CONTACTO GUARDADO');
+    setButtonText('✓ GUARDADO');
     setTimeout(() => {
       setIsAnimating(false);
       setButtonText('GUARDAR CONTACTO');
@@ -37,14 +37,18 @@ export default function Home() {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center text-white"
+      className="h-[100dvh] mb-2 flex flex-col items-center justify-center bg-cover bg-center text-white"
       style={{
         backgroundImage: `url('https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/ic8lokamemlhpm10auvu')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
     >
+      {/* Black background overlay */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
+      
+      {/* New blue overlay with 70% opacity */}
+      <div className="absolute inset-0 bg-[#17283D]/70 z-0"></div>
 
       <div className="relative z-10 w-full max-w-sm px-6 py-12 flex flex-col flex-grow">
         <motion.h1
@@ -57,11 +61,11 @@ export default function Home() {
           UMLYEV BUSINESS
         </motion.h1>
 
-        <div className="space-y-3 w-full mt-auto  text-sm">
+        <div className="space-y-3 w-full mt-auto text-sm">
           <motion.a
             transition={{ delay: 0.2, duration: 0.6 }}
             href="tel:+351965465946"
-            className="flex items-center w-full bg-black/40 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-black/60 transition-all duration-300"
+            className="flex items-center w-full bg-[#17283D]/90 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-[#17283D] transition-all duration-300 shadow-lg shadow-black/50"
           >
             <div className="w-8 h-8 flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,7 +80,7 @@ export default function Home() {
           <motion.a
             transition={{ delay: 0.4, duration: 0.6 }}
             href="https://wa.me/+351965465946"
-            className="flex items-center w-full bg-black/40 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-black/60 transition-all duration-300"
+            className="flex items-center w-full bg-[#17283D]/90 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-[#17283D] transition-all duration-300 shadow-lg shadow-black/50"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -92,7 +96,7 @@ export default function Home() {
 
           <motion.a
             href="mailto:umlyev@gmail.com"
-            className="flex items-center w-full bg-black/40 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-black/60 transition-all duration-300"
+            className="flex items-center w-full bg-[#17283D]/90 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-[#17283D] transition-all duration-300 shadow-lg shadow-black/50"
           >
             <div className="w-8 h-8 flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -106,7 +110,7 @@ export default function Home() {
 
           <motion.button
             onClick={saveContact}
-            className={`flex items-center w-full bg-black/40 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-black/60 transition-all duration-300 ${isAnimating ? 'bg-black/60' : ''}`}
+            className={`flex items-center w-full bg-[#17283D]/90 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-[#17283D] transition-all duration-300 shadow-lg shadow-black/50 ${isAnimating ? 'bg-[#17283D]' : ''}`}
           >
             <div className="w-8 h-8 flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

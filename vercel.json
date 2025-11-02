@@ -1,0 +1,9 @@
+{
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "destination": "https://umylev-business.com/$1",
+        "permanent": true
+      }
+    ]
+  }

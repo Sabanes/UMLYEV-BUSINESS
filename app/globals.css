@@ -1,17 +1,12 @@
 @import "tailwindcss";
-
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap');
-
-
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-orbitron), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.new {
-  font-family: 'Orbitron', sans-serif;
-
+.font-orbitron {
+  font-family: var(--font-orbitron), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {

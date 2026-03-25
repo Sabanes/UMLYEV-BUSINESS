@@ -1,9 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 
 export default function Home() {
-  const [buttonText, setButtonText] = useState('GUARDAR CONTACTO');
+  const [buttonText, setButtonText] = useState('SAVE CONTACT');
   const [isAnimating, setIsAnimating] = useState(false);
 
   const saveContact = () => {
@@ -28,10 +27,10 @@ export default function Home() {
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
 
-    setButtonText('✓ GUARDADO');
+    setButtonText('✓ SAVED');
     setTimeout(() => {
       setIsAnimating(false);
-      setButtonText('GUARDAR CONTACTO');
+      setButtonText('SAVE CONTACT');
     }, 2000);
   };
 
@@ -46,24 +45,20 @@ export default function Home() {
     >
       {/* Black background overlay */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
-      
+
       {/* New blue overlay with 70% opacity */}
       <div className="absolute inset-0 bg-[#17283D]/70 z-0"></div>
 
       <div className="relative z-10 font-medium font-orbitron w-full max-w-sm px-6 py-12 flex flex-col flex-grow">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <h1
           className="text-4xl sm:text-5xl font-light mb-24 tracking-widest text-center text-gray-200 font-orbitron"
           style={{ letterSpacing: '0.15em' }}
         >
           UMLYEV BUSINESS
-        </motion.h1>
+        </h1>
 
         <div className="space-y-3 w-full mt-auto text-sm">
-          <motion.a
-            transition={{ delay: 0.2, duration: 0.6 }}
+          <a
             href="tel:+351965465946"
             className="flex items-center w-full bg-[#17283D]/90 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-[#17283D] transition-all duration-300 shadow-lg shadow-black/50"
           >
@@ -73,12 +68,11 @@ export default function Home() {
               </svg>
             </div>
             <span className="ml-4 tracking-widest text-gray-300 font-orbitron">
-              CHAMADA
+              CALL
             </span>
-          </motion.a>
+          </a>
 
-          <motion.a
-            transition={{ delay: 0.4, duration: 0.6 }}
+          <a
             href="https://wa.me/+351965465946"
             className="flex items-center w-full bg-[#17283D]/90 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-[#17283D] transition-all duration-300 shadow-lg shadow-black/50"
             target="_blank"
@@ -92,9 +86,9 @@ export default function Home() {
             <span className="ml-4 tracking-widest text-gray-300 font-orbitron">
               WHATSAPP
             </span>
-          </motion.a>
+          </a>
 
-          <motion.a
+          <a
             href="mailto:umlyev@gmail.com"
             className="flex items-center w-full bg-[#17283D]/90 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-[#17283D] transition-all duration-300 shadow-lg shadow-black/50"
           >
@@ -106,9 +100,9 @@ export default function Home() {
             <span className="ml-4 tracking-widest text-gray-300 font-orbitron">
               E-MAIL
             </span>
-          </motion.a>
+          </a>
 
-          <motion.button
+          <button
             onClick={saveContact}
             className={`flex items-center w-full bg-[#17283D]/90 backdrop-blur-sm py-3 px-5 rounded-md border border-gray-800 hover:bg-[#17283D] transition-all duration-300 shadow-lg shadow-black/50 ${isAnimating ? 'bg-[#17283D]' : ''}`}
           >
@@ -120,7 +114,7 @@ export default function Home() {
             <span className={`ml-4 tracking-widest text-gray-300 font-orbitron ${isAnimating ? 'text-white' : ''}`}>
               {buttonText}
             </span>
-          </motion.button>
+          </button>
         </div>
       </div>
     </div>

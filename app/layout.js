@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 
 export const metadata = {
   title: "Umlyev Business",
-  description: "Informações de contacto",
+  description: "Contact information",
 };
 
 const orbitron = localFont({
@@ -25,7 +25,7 @@ const orbitron = localFont({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt" className={orbitron.variable}>
+    <html lang="en" className={orbitron.variable}>
       <body className="antialiased">
         {children}
       </body>

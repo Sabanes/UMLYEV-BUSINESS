@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(react-icons.github.io)",
+      "WebSearch"
+    ]
+  }
+}
